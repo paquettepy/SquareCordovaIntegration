@@ -1,26 +1,17 @@
-function CordovaSquareReader() {
-}
+const exec = require('cordova/exec');
 
-CordovaSquareReader.prototype.retrieveAuthorizationCode = function (params, successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, "CordovaSquareReader", "retrieveAuthorizationCode", [params]);
+exports.retrieveAuthorizationCode = function (params, successCallback, errorCallback) {
+  exec(successCallback, errorCallback, "CordovaSquareReader", "retrieveAuthorizationCode", [params]);
 };
 
-CordovaSquareReader.prototype.authorizeReaderSDKIfNeeded = function (params, successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, "CordovaSquareReader", "authorizeReaderSDKIfNeeded", [params]);
+exports.authorizeReaderSDKIfNeeded = function (params, successCallback, errorCallback) {
+  exec(successCallback, errorCallback, "CordovaSquareReader", "authorizeReaderSDKIfNeeded", [params]);
 };
 
-CordovaSquareReader.prototype.startCheckout = function (params, successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, "CordovaSquareReader", "startCheckout", [params]);
+exports.startCheckout = function (params, successCallback, errorCallback) {
+  exec(successCallback, errorCallback, "CordovaSquareReader", "startCheckout", [params]);
 };
 
-CordovaSquareReader.prototype.pairCardReaders = function (successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, "CordovaSquareReader", "pairCardReaders", []);
+exports.pairCardReaders = function (successCallback, errorCallback) {
+  exec(successCallback, errorCallback, "CordovaSquareReader", "pairCardReaders", []);
 };
-
-CordovaSquareReader.install = function () {
-  window.squarereader = new CordovaSquareReader();
-
-  return window.squarereader;
-};
-
-cordova.addConstructor(CordovaSquareReader.install);
