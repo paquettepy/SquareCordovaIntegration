@@ -1,6 +1,7 @@
 # Cordova Square Reader SDK
 
 A fork of https://github.com/sudhirdhumal289/SquareCordovaIntegration, includes updates for Cordova v8.
+
 The rest of the readme is left intact:
 
 A Cordova plugin to interface with the native Square Reader SDK.
