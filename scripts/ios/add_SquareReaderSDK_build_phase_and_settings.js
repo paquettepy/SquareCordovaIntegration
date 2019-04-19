@@ -9,7 +9,9 @@ const myProj = xcode.project(projectPath);
 var options = { shellPath: '/bin/sh', shellScript: 'FRAMEWORKS="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}"\n"${FRAMEWORKS}/SquareReaderSDK.framework/setup"' };
 
 myProj.parse(function(err) {
+  console.log('SQUARE READER SDK IOS -- ADDING BUILD PHASE');
   myProj.addBuildPhase([], 'PBXShellScriptBuildPhase', 'Run a script', myProj.getFirstTarget().uuid, options);
+  console.log('SQUARE READER SDK IOS -- ADDING VALID ARCHITECTURES (arm64 armv7s)');
   myProj.addToBuildSettings('VALID_ARCHS', '"arm64 armv7s"');
   fs.writeFileSync(projectPath, myProj.writeSync());
 })
