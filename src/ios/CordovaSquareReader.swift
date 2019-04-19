@@ -1,6 +1,6 @@
 import SquareReaderSDK
 import CoreLocation
-import AVKit
+import AVFoundation
 
 @objc(CordovaSquareReader) class CordovaSquareReader : CDVPlugin, SQRDCheckoutControllerDelegate, SQRDReaderSettingsControllerDelegate, CLLocationManagerDelegate {
     private lazy var locationManager = CLLocationManager()

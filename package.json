@@ -26,5 +26,8 @@
   "homepage": "https://github.com/paquettepy/SquareCordovaIntegration#readme",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "xcode": "^2.0.0"
   }
 }
